@@ -74,7 +74,10 @@
         "viewPath": "com.managegoods.view",
         "controlAggregation": "pages",
         "controlId": "app",
-        "clearControlAggregation": false
+        "bypassed": {
+          "target": ["login"]
+      }
+        
       },
       "routes": [
         {
@@ -83,7 +86,16 @@
           "target": [
             "TargetView"
           ]
-        }
+        },{
+          "name": "login",
+          "pattern": "",
+          "target": "login"
+      },
+      {
+          "name": "main",
+          "pattern": "main",
+          "target": "main"
+      }
       ],
       "targets": {
         "TargetView": {
@@ -92,7 +104,16 @@
           "clearControlAggregation": false,
           "viewId": "View",
           "viewName": "View"
-        }
+        },"login": {
+          "viewType": "XML",
+          "viewName": "Login",
+          "transition": "slide"
+      },
+      "main": {
+          "viewType": "XML",
+          "viewName": "Main",
+          "transition": "slide"
+      }
       }
     },
     "rootView": {

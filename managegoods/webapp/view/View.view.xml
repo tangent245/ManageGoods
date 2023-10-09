@@ -2,6 +2,13 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
-        <content />
+        <content>
+            <VBox justifyContent="Center" alignItems="Center" height="60%">
+                <Input id="usernameInput" placeholder="Username" />
+                <Input id="passwordInput" type="Password" placeholder="Password" />
+                <Button text="Login" press="onLoginPress" />
+            </VBox>
+        </content>
     </Page>
 </mvc:View>
+
